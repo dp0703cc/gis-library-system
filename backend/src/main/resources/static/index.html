@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>成都市高校图书馆（GIS演示）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 60vh; }
+    .legend { background: white; padding: 8px 10px; line-height: 18px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+    .legend i { width: 12px; height: 12px; display: inline-block; margin-right: 6px; }
+    header { padding: 8px 12px; font-weight: 600; }
+    .search { padding: 10px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 6px; }
+    th { background: #f6f8fa; text-align: left; }
+  </style>
+</head>
+<body>
+  <header>基于 GIS 的成都市高校分布式图书管理系统（演示）</header>
+  <div class="search">
+    <input id="q" placeholder="搜索书名/作者/ISBN" style="width:260px" />
+    <button id="btnSearch">搜索</button>
+  </div>
+  <div id="map"></div>
+  <h3>检索结果</h3>
+  <table id="result"><thead><tr>
+    <th>ISBN</th><th>书名</th><th>作者</th><th>馆藏ID</th><th>状态</th><th>馆名</th>
+  </tr></thead><tbody></tbody></table>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
